@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVANDO QUE ESTOU CERTO!</title>
+    <style>
+        .pamelafundo {
+            background-image: url('pamela.jpg');
+            background-repeat: repeat;
+            background-position: center;
+            background-size: 100%;
+            height: 850px;
+        }
+
+        .h1{
+            text-align: center;
+            padding-top: 100px;
+            margin-left: 5%;
+        }
+        .buttons{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pamelafundo">
+        <h1 class="h1">Pâmela, admita, você é uma caloteira?</h1>
+            <div class="buttons">
+                <input type="button" value="Sim!" id="btnsim" onclick="testarsim()">
+                <input type="button" value="Não!" id="btnnao" onclick="testarnao()" onmouseenter="entrar()">
+                <h2 id="divresposta"></h2>
+            </div>
+    </div>
+
+   
+
+<script>
+        var pegarbtn2 = document.getElementById('btnnao')
+        var pegardiv = document.querySelector('h2#divresposta')
+        pegardiv.style.background = ''
+        
+    function testarsim() {
+        pegardiv.style.background = 'rgb(224, 38, 110)'
+        pegardiv.innerHTML = `<h2>Pâmela, obrigado por confirmar, você é oficialmente uma caloteira! </h2> <style> h2 {margin-left: 4%;margin-right:4%; margin-top: 350px}`
+        btnnao.value = "Não"
+        
+    }
+
+    function entrar() {
+        btnnao.value = "óbvio que sim"
+        pegardiv.style.background = 'rgb(224, 38, 110)'
+        pegardiv.innerHTML = `<h2>Pâmela, obrigado por confirmar, você sempre foi uma caloteira mesmo </h2> <style> h2 {margin-left: 4%;margin-right:4%; margin-top: 350px}`
+    
+    }
+    
+</script>
+    
+</body>
+</html>
